@@ -1,0 +1,148 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
+[ext_resource path="res://Paddle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Tile.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Score.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Lives.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Starting.gd" type="Script" id=6]
+[ext_resource path="res://PNG (Transparent)/coronavirus-map-042720-homepage.png" type="Texture" id=7]
+[ext_resource path="res://Italy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Japan.tscn" type="PackedScene" id=9]
+[ext_resource path="res://PNG (Transparent)/game music.wav" type="AudioStream" id=10]
+[ext_resource path="res://Spain.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Mexico.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Chile.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Jamaica.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Russia.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Greece.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Brazil.tscn" type="PackedScene" id=17]
+[ext_resource path="res://UK.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Colombia.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Germany.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Ghana.tscn" type="PackedScene" id=21]
+[ext_resource path="res://France.tscn" type="PackedScene" id=22]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="iu_collection" type="Sprite" parent="."]
+position = Vector2( 609.607, 339.674 )
+scale = Vector2( 1.78376, 1.88919 )
+texture = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="iu_collection"]
+margin_left = -1026.0
+margin_top = -403.0
+margin_right = 1021.0
+margin_bottom = 419.0
+color = Color( 0, 0, 0, 0.419608 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="Paddle" parent="." instance=ExtResource( 2 )]
+
+[node name="Wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
+modulate = Color( 1, 0.682353, 0, 1 )
+position = Vector2( 46.8767, -2.05054 )
+scale = Vector2( 0.914092, 1 )
+polygon = PoolVector2Array( 0, 632, 0, 0, 1024, 0, 1024, 632, 1064, 632, 1068.33, 271.017, 1064, -40, -48, -40, -48, 632 )
+
+[node name="Tiles" type="Node2D" parent="Wall"]
+
+[node name="Tile" parent="Wall/Tiles" instance=ExtResource( 3 )]
+position = Vector2( 182.46, 306.267 )
+
+[node name="StaticBody2D" parent="Wall/Tiles" instance=ExtResource( 11 )]
+position = Vector2( 185.388, 164.517 )
+
+[node name="StaticBody2D2" parent="Wall/Tiles" instance=ExtResource( 9 )]
+position = Vector2( 73.6895, 44.3464 )
+
+[node name="StaticBody2D3" parent="Wall/Tiles" instance=ExtResource( 8 )]
+position = Vector2( 409.498, 65.8469 )
+
+[node name="StaticBody2D4" parent="Wall/Tiles" instance=ExtResource( 12 )]
+position = Vector2( 488.987, 114.144 )
+
+[node name="StaticBody2D5" parent="Wall/Tiles" instance=ExtResource( 13 )]
+position = Vector2( -156.997, 23.3826 )
+
+[node name="StaticBody2D6" parent="Wall/Tiles" instance=ExtResource( 21 )]
+position = Vector2( -10.0211, 20.0422 )
+
+[node name="StaticBody2D7" parent="Wall/Tiles" instance=ExtResource( 18 )]
+position = Vector2( 142.647, 21.0745 )
+
+[node name="StaticBody2D8" parent="Wall/Tiles" instance=ExtResource( 15 )]
+position = Vector2( 319.997, 21.7124 )
+
+[node name="StaticBody2D9" parent="Wall/Tiles" instance=ExtResource( 17 )]
+position = Vector2( 491.877, 15.0316 )
+
+[node name="StaticBody2D10" parent="Wall/Tiles" instance=ExtResource( 20 )]
+position = Vector2( -155.327, -65.8355 )
+
+[node name="StaticBody2D11" parent="Wall/Tiles" instance=ExtResource( 22 )]
+position = Vector2( -8.62445, -65.8354 )
+
+[node name="StaticBody2D12" parent="Wall/Tiles" instance=ExtResource( 16 )]
+position = Vector2( 140.691, -64.1653 )
+
+[node name="StaticBody2D13" parent="Wall/Tiles" instance=ExtResource( 19 )]
+position = Vector2( 319.997, -63.996 )
+
+[node name="StaticBody2D14" parent="Wall/Tiles" instance=ExtResource( 14 )]
+position = Vector2( 488.48, -75.9189 )
+
+[node name="Score" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 112.0
+margin_bottom = 30.0
+text = "Score: "
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lives" type="Label" parent="."]
+margin_left = 952.0
+margin_top = 16.0
+margin_right = 1006.0
+margin_bottom = 30.0
+text = "Lives:"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Starting" type="Label" parent="."]
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 1026.0
+margin_bottom = 113.0
+align = 1
+valign = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+countdown = 3
+
+[node name="Timer" type="Timer" parent="Starting"]
+wait_time = 10.0
+
+[node name="Backround" type="Node2D" parent="."]
+
+[node name="Backround Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+[connection signal="timeout" from="Starting/Timer" to="Starting" method="_on_Timer_timeout"]

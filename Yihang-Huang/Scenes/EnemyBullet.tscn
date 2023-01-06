@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/EnemyBullet.gd" type="Script" id=1]
+[ext_resource path="res://Assets/bullet2.png" type="Texture" id=2]
+
+[node name="EnemyBullet" type="RigidBody2D"]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 3.14159
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = -3.14159
+scale = Vector2( 0.45, 0.45 )
+polygon = PoolVector2Array( 17, -47.5, 17, -45.7, 27, -33.7, 27, -29.4, 34, -9.3, 34, 21, 32.8, 21, 31.8, 32, 30.3, 32, 26.3, 41, 24.7, 41, 8.7, 53, -10, 53, -10, 51.4, -19, 48.4, -19, 46.9, -32, 32.8, -32, 29, -35.2, -9, -33.7, -9, -28.7, -37, -26.9, -37, -16.9, -48, -14.3, -48, -3, -51.5, -3, -53.7 )

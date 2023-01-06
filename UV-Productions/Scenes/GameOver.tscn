@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/OstrichSans-Heavy copy.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Death corona.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/cough.wav" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 39
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 89
+font_data = ExtResource( 1 )
+
+[node name="Game Over" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -34.7053
+margin_top = -78.4264
+margin_right = 1038.29
+margin_bottom = 660.574
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 521.717, 387.816 )
+scale = Vector2( 1.62657, 1.62657 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -332.94
+margin_top = 108.596
+margin_right = 1387.06
+margin_bottom = 196.596
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.941176, 0.0666667, 0.0235294, 1 )
+text = "Don't worry you're not dead but give it two weeks and then we'll see "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = 9.65
+pitch_scale = 1.02
+autoplay = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 136.445
+margin_top = -92.0611
+margin_right = 903.445
+margin_bottom = 175.939
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.952941, 0.0784314, 0.0784314, 1 )
+text = "You Have Coronavirus!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 136.445
+margin_top = 482.225
+margin_right = 903.445
+margin_bottom = 750.225
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.803922, 0.772549, 0.00784314, 1 )
+text = "Stay HOMe NEXT TIME "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Play.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Quit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Roboto/Roboto-BoldItalic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Tiles/download.jpg" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 3 )
+
+[node name="MainScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.89075
+margin_top = -3.15126
+margin_right = -1.89075
+margin_bottom = -3.15125
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1025.0
+margin_bottom = 659.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 362.408
+margin_top = 107.248
+margin_right = 648.408
+margin_bottom = 170.248
+custom_fonts/font = SubResource( 1 )
+text = "La Corona"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.0
+margin_top = -92.0
+margin_right = 168.0
+margin_bottom = 92.0
+size_flags_stretch_ratio = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" parent="Menu" instance=ExtResource( 1 )]
+size_flags_vertical = 3
+next_scene_path = "res://Scenes/Game.tscn"
+
+[node name="Quit" parent="Menu" instance=ExtResource( 2 )]
+size_flags_vertical = 3

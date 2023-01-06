@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://board.gd" type="Script" id=1]
+[ext_resource path="res://tilesets/tpsheet.res" type="TileSet" id=2]
+[ext_resource path="res://sounds/coronabackgroundmusic.ogg" type="AudioStream" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "completed"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("completed_lines:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.25, 0.38, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="board" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="board_tiles" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 65536, 0, 0, 65547, 0, 0, 131072, 0, 0, 131083, 0, 0, 196608, 0, 0, 196619, 0, 0, 262144, 0, 0, 262155, 0, 0, 327680, 0, 0, 327691, 0, 0, 393216, 0, 0, 393227, 0, 0, 458752, 0, 0, 458763, 0, 0, 524288, 0, 0, 524299, 0, 0, 589824, 0, 0, 589835, 0, 0, 655360, 0, 0, 655371, 0, 0, 720896, 0, 0, 720907, 0, 0, 786432, 0, 0, 786443, 0, 0, 851968, 0, 0, 851979, 0, 0, 917504, 0, 0, 917515, 0, 0, 983040, 0, 0, 983051, 0, 0, 1048576, 0, 0, 1048587, 0, 0, 1114112, 0, 0, 1114123, 0, 0, 1179648, 0, 0, 1179659, 0, 0, 1245184, 0, 0, 1245195, 0, 0, 1310720, 0, 0, 1310731, 0, 0, 1376256, 0, 0, 1376257, 0, 0, 1376258, 0, 0, 1376259, 0, 0, 1376260, 0, 0, 1376261, 0, 0, 1376262, 0, 0, 1376263, 0, 0, 1376264, 0, 0, 1376265, 0, 0, 1376266, 0, 0, 1376267, 0, 0 )
+
+[node name="completed_lines" type="TileMap" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+
+[node name="completed_animation" type="AnimationPlayer" parent="."]
+anims/completed = SubResource( 1 )
+
+[node name="falling_tiles" type="Node2D" parent="."]
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+[connection signal="animation_finished" from="completed_animation" to="." method="_on_completed_animation_animation_finished"]

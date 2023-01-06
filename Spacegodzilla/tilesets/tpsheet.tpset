@@ -1,0 +1,108 @@
+{
+	"textures": [
+		{
+			"image": "tpsheet.png",
+			"size": {
+				"w": 108,
+				"h": 18
+			},
+			"sprites": [
+				{
+					"filename": "Gloves_SingleScales.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Mask_SingleScales.png",
+					"region": {
+						"x": 19,
+						"y": 1,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Rona_SingleScales.png",
+					"region": {
+						"x": 37,
+						"y": 1,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Soap_SingleScales.png",
+					"region": {
+						"x": 55,
+						"y": 1,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "TP_SingleScales.png",
+					"region": {
+						"x": 73,
+						"y": 1,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Wipes_SingleScales.png",
+					"region": {
+						"x": 91,
+						"y": 1,
+						"w": 16,
+						"h": 16
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:c79a5eadedab01a3bd43a79b6a1fec19:d6e52779573632236305c945b7c2bfe2:84eb88ac0a6b56b2b11f460edbbaf86d$"
+	}
+}

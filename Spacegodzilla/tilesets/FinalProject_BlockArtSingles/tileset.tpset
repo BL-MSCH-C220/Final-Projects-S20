@@ -1,0 +1,126 @@
+{
+	"textures": [
+		{
+			"image": "tileset-0.png",
+			"size": {
+				"w": 1763,
+				"h": 1763
+			},
+			"sprites": [
+				{
+					"filename": "Gloves_Single.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 1763,
+						"h": 1763
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "tileset-1.png",
+			"size": {
+				"w": 1776,
+				"h": 1775
+			},
+			"sprites": [
+				{
+					"filename": "Mask_Single.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 887,
+						"h": 887
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Rona_Single.png",
+					"region": {
+						"x": 887,
+						"y": 0,
+						"w": 886,
+						"h": 886
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Soap_Single.png",
+					"region": {
+						"x": 0,
+						"y": 887,
+						"w": 888,
+						"h": 888
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "TP_Single.png",
+					"region": {
+						"x": 888,
+						"y": 887,
+						"w": 888,
+						"h": 888
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "tileset-2.png",
+			"size": {
+				"w": 893,
+				"h": 893
+			},
+			"sprites": [
+				{
+					"filename": "Wipes_Single.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 893,
+						"h": 893
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:b58ce658f02fba0a1c6155f3120ce2f4:0b776961477f1e28591bee8afd814e4c:94d7465741ee32bad6cbc6e3526bb822$"
+	}
+}

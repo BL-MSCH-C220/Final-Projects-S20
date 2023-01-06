@@ -1,0 +1,148 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/GroundTile.tres" type="TileSet" id=2]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/ToiletPaper.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/OstrichSans-Heavy.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Scripts/HUD.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/World.gd" type="Script" id=7]
+[ext_resource path="res://Assets/door.PNG" type="Texture" id=8]
+[ext_resource path="res://Assets/Sounds/256570__sjnewton__sneeze.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Sounds/background.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/GroceryAisle.jpg" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 85.9277, 73.3728 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 116.651, 456.021 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.03, 0.03 )
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( 2360964, 0, 0, 2361007, 0, 0, 2361050, 0, 0, 2361095, 0, 0, 2361140, 0, 0, 2361185, 0, 0, 2426834, 0, 0, 2426877, 0, 0, 5178913, 0, 0, 7603745, 0, 0, 8061955, 0, 0, 8061999, 0, 0, 8062044, 0, 0, 8127102, 0, 0, 8127146, 0, 0, 8127191, 0, 0, 8127235, 0, 0, 8127279, 0, 0, 8127324, 0, 0, 8127368, 0, 0, 8586712, 0, 0, 10158232, 0, 0, 10158276, 0, 0, 10158320, 0, 0, 10158364, 0, 0, 10158408, 0, 0, 10289698, 0, 0, 10880378, 0, 0, 12584147, 0, 0, 12584191, 0, 0, 12714486, 0, 0, 15597524, 0, 0, 15534404, 0, 0, 15598020, 0, 0, 15598454, 0, 0, 18022400, 0, 0, 18022445, 0, 0, 18022490, 0, 0, 18022534, 0, 0, 18022578, 0, 0, 18022622, 0, 0, 18022666, 0, 0, 18022710, 0, 0, 18022754, 0, 0, 18022798, 0, 0, 18022842, 0, 0, 18022886, 0, 0, 18022930, 0, 0, 18022973, 0, 0, 18023017, 0, 0, 18023061, 0, 0, 18023105, 0, 0, 18023149, 0, 0, 18023193, 0, 0, 18023236, 0, 0, 18023280, 0, 0, 18023324, 0, 0, 18023367, 0, 0, 18023410, 0, 0, 18023453, 0, 0, 18023497, 0, 0, 18023541, 0, 0, 18023585, 0, 0, 18023629, 0, 0, 18023673, 0, 0, 18023717, 0, 0, 18023761, 0, 0, 18023805, 0, 0, 18023849, 0, 0, 18023893, 0, 0, 18023937, 0, 0, 18023981, 0, 0, 18024025, 0, 0, 18024069, 0, 0, 18024113, 0, 0, 18024157, 0, 0, 18024201, 0, 0, 18024245, 0, 0, 18024289, 0, 0, 18024333, 0, 0, 18024377, 0, 0, 18024420, 0, 0, 18024464, 0, 0, 18024508, 0, 0, 18024552, 0, 0, 18024595, 0, 0, 18024639, 0, 0, 18024683, 0, 0, 18024727, 0, 0 )
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy00" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 546.343, 477.417 )
+
+[node name="Enemy01" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 599.08, 249.417 )
+
+[node name="Enemy02" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 1393.43, 485.143 )
+scale = Vector2( 0.6, 0.6 )
+collision/safe_margin = 0.1
+
+[node name="Enemy03" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 3567.42, 348.781 )
+scale = Vector2( 4.5, 4.5 )
+SPEED = 120
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="HUD"]
+margin_left = 46.723
+margin_top = 52.8563
+margin_right = 216.723
+margin_bottom = 79.8563
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Toilet Paper"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToiletPapers" type="Node2D" parent="."]
+
+[node name="ToiletPaper00" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 346.628, 260.12 )
+
+[node name="ToiletPaper01" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 1232.95, 472.752 )
+
+[node name="ToiletPaper02" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 1058.21, 488.541 )
+
+[node name="ToiletPaper03" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 1358.74, 200.643 )
+
+[node name="ToiletPaper04" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 1731.47, 200.643 )
+
+[node name="ToiletPaper05" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 2123.16, 202.448 )
+
+[node name="ToiletPaper06" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 2473.33, 343.239 )
+
+[node name="ToiletPaper07" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 2736.69, 488.363 )
+
+[node name="ToiletPaper08" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 2820.24, 427.57 )
+
+[node name="ToiletPaper09" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 2817.32, 493.047 )
+
+[node name="ToiletPaper10" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 2823.19, 363.695 )
+
+[node name="ToiletPaper11" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 3841.41, 23.7361 )
+
+[node name="EnemyTimer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 4469.86, 455 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 8 )
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="Sneeze" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 9 )
+
+[node name="background" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 10 )
+autoplay = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.4, 0.4 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1500, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2.50079, -173.869 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 11 )
+centered = false
+[connection signal="scoreUpdate" from="Player" to="HUD" method="_on_Player_scoreUpdate"]
+[connection signal="timeout" from="EnemyTimer" to="." method="_on_EnemyTimer_timeout"]
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_Area2D_body_entered"]

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f668e2799514f1544b884de49203d2fe, type: 3}
+  m_Name: Dog01
+  m_EditorClassIdentifier: 
+  name: Bella
+  description: Bella is a Boxer mix with a big appetite! Her favorite snacks are hot
+    dogs and bananas.
+  artwork: {fileID: 6046953390153988404, guid: a8d704615331a4244ae7e8359ba15a3d, type: 3}
+  cost: 5

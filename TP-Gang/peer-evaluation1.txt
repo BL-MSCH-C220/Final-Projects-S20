@@ -1,0 +1,47 @@
+Name: Nicholas Jager
+Date: 5/1/20
+
+Project: Supply Run by TP Gang
+Group's repository: https://github.com/moomurrs/Final-Project
+
+
+
+What is something you learned by reviewing this group's project?
+ 
+    I learned about using a parallax background. I have never used one before and it was cool to see.
+
+In what ways does this game reflect the theme?
+
+    You play as a person trying to get essential supplies, toilet paper, from the store while avoiding the virus which almost everyone has to do. 
+
+What is something you saw in this group's project that you would like to apply to your own future games?
+
+    Original art! It takes a lot of work but adds a ton of value to the appeal of the game.
+
+What suggestions would you have for this group to improve the game?
+
+    Fixing the animation to work when facing left is a pretty critical visual improvement, but reading the README.md I understand the struggle. I would also give the player a degree of health so they can survive multiple hits.
+
+Was there anything in the GDScript that was confusing to you? If so, what?
+
+    No, the team did a really great job of adding in # comments that describe what every part of the script is doing.
+
+Is it clear that every group member participated?
+
+    It is not clear looking at the Github Insights on the project showing that one member authored way more commits than anyone else, but this could also just be a different style of version control so it's hard to know.
+
+Does the repository contain an appropriate LICENSE?
+
+    Yes.
+
+What is something the group could add to the README.md to make it more descriptive?
+
+    The group could have added more about how the enemy agent functions in the game, stating that it falls from the ceiling and that it kills the player in one hit.
+
+Pay a compliment to the group based on the quality of the game.
+
+    The art direction is great! The overall stylistic effect really comes through. Also, having an end screen that reports score is a really nice touch.
+
+How many of your points would you allocate to this project?
+
+    3

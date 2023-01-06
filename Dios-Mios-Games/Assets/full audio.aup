@@ -1,0 +1,201 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="full audio_data" version="1.3.0" audacityversion="2.3.3" sel0="72.5494451798" sel1="72.5494451798" vpos="0" h="52.5268384456" zoom="11.5369593513" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="Software" value="Lavf58.29.100"/>
+		<tag name="major_brand" value="dash"/>
+		<tag name="minor_version" value="0"/>
+		<tag name="compatible_brands" value="iso6mp41"/>
+		<tag name="TITLE" value="Indiana, Our Indiana"/>
+		<tag name="creation_time" value="2019-11-13T21:09:32.000000Z"/>
+		<tag name="comment" value="Audio recorded by Yout.com"/>
+	</tags>
+	<wavetrack name="indiana-university-hoosiers-fight-song" isSelected="1" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="65.25319813" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1049546">
+				<waveblock start="0">
+					<simpleblockfile filename="e08084c7.au" len="206922" min="-0.049497" max="0.065775" rms="0.007979"/>
+				</waveblock>
+				<waveblock start="206922">
+					<simpleblockfile filename="e0808448.au" len="262144" min="-0.094298" max="0.092712" rms="0.021672"/>
+				</waveblock>
+				<waveblock start="469066">
+					<simpleblockfile filename="e0808ff1.au" len="262144" min="-0.10294" max="0.134458" rms="0.023257"/>
+				</waveblock>
+				<waveblock start="731210">
+					<simpleblockfile filename="e08088f4.au" len="262144" min="-0.072242" max="0.066876" rms="0.013789"/>
+				</waveblock>
+				<waveblock start="993354">
+					<simpleblockfile filename="e08087cf.au" len="56192" min="-0.016999" max="0.018391" rms="0.003143"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2805120">
+				<waveblock start="0">
+					<simpleblockfile filename="e08081fe.au" len="262144" min="-1.006333" max="0.874653" rms="0.154954"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0808b73.au" len="262144" min="-1.061913" max="1.011563" rms="0.153745"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e080850d.au" len="262144" min="-0.9847" max="0.990649" rms="0.157337"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0808197.au" len="262144" min="-0.981905" max="1.031508" rms="0.168658"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e080835c.au" len="262144" min="-0.993511" max="1.007652" rms="0.168464"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e080863f.au" len="262144" min="-1.091642" max="0.957736" rms="0.150522"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e0808a03.au" len="262144" min="-1.186791" max="1.024968" rms="0.16013"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e0808b7b.au" len="262144" min="-0.875099" max="1.005615" rms="0.151883"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="e08088d7.au" len="262144" min="-1.020394" max="1.026766" rms="0.182632"/>
+				</waveblock>
+				<waveblock start="2359296">
+					<simpleblockfile filename="e080871b.au" len="262144" min="-1.068526" max="1.091898" rms="0.207839"/>
+				</waveblock>
+				<waveblock start="2621440">
+					<simpleblockfile filename="e08086b6.au" len="183680" min="-0.9941" max="1.014818" rms="0.118956"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="91.42142583" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2069021">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808459.au" len="262144" min="-0.043523" max="0.041675" rms="0.006253"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0808193.au" len="262144" min="-0.090682" max="0.100595" rms="0.01951"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0808528.au" len="262144" min="-0.151078" max="0.15323" rms="0.032134"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e080865b.au" len="262144" min="-0.216894" max="0.19197" rms="0.041584"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0808db6.au" len="262144" min="-0.251052" max="0.246454" rms="0.05151"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e080827a.au" len="262144" min="-0.273384" max="0.290571" rms="0.059542"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e08088a4.au" len="262144" min="-0.329595" max="0.375987" rms="0.078282"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e08081df.au" len="234013" min="-0.411128" max="0.42631" rms="0.082489"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="indiana-university-hoosiers-fight-song" isSelected="1" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="65.25319813" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1049546">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808eb2.au" len="206922" min="-0.052652" max="0.051567" rms="0.008077"/>
+				</waveblock>
+				<waveblock start="206922">
+					<simpleblockfile filename="e08087ad.au" len="262144" min="-0.085461" max="0.10434" rms="0.021602"/>
+				</waveblock>
+				<waveblock start="469066">
+					<simpleblockfile filename="e0808073.au" len="262144" min="-0.10631" max="0.113765" rms="0.023265"/>
+				</waveblock>
+				<waveblock start="731210">
+					<simpleblockfile filename="e08080a1.au" len="262144" min="-0.068155" max="0.079072" rms="0.013776"/>
+				</waveblock>
+				<waveblock start="993354">
+					<simpleblockfile filename="e08084e7.au" len="56192" min="-0.017253" max="0.015701" rms="0.003097"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2805120">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808593.au" len="262144" min="-0.987801" max="0.973836" rms="0.165291"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0808156.au" len="262144" min="-1.046558" max="0.937713" rms="0.144426"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0808e12.au" len="262144" min="-0.925334" max="0.951325" rms="0.165923"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e080820e.au" len="262144" min="-0.957623" max="0.998512" rms="0.183859"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0808407.au" len="262144" min="-0.94133" max="0.987252" rms="0.153111"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e0808508.au" len="262144" min="-1.063228" max="0.968047" rms="0.150996"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e0808a1e.au" len="262144" min="-0.881816" max="1.005541" rms="0.150962"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e0808ddc.au" len="262144" min="-0.919631" max="0.990075" rms="0.175363"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="e08088f7.au" len="262144" min="-1.033898" max="0.996422" rms="0.186158"/>
+				</waveblock>
+				<waveblock start="2359296">
+					<simpleblockfile filename="e0808402.au" len="262144" min="-0.961292" max="1.032479" rms="0.174714"/>
+				</waveblock>
+				<waveblock start="2621440">
+					<simpleblockfile filename="e0808c2f.au" len="183680" min="-0.938855" max="0.941969" rms="0.102375"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="91.42142583" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2069021">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808fae.au" len="262144" min="-0.045992" max="0.045618" rms="0.006466"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0808bca.au" len="262144" min="-0.112531" max="0.099137" rms="0.020159"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e08088ae.au" len="262144" min="-0.150167" max="0.160689" rms="0.033329"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e08080dc.au" len="262144" min="-0.220803" max="0.199723" rms="0.043172"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0808c48.au" len="262144" min="-0.276962" max="0.253027" rms="0.053531"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e080848f.au" len="262144" min="-0.252605" max="0.302863" rms="0.061676"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e08080d4.au" len="262144" min="-0.34927" max="0.391472" rms="0.081243"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e0808698.au" len="234013" min="-0.419326" max="0.455771" rms="0.085499"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="iu-buzzer-beater-vs-kentucky-hd" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+	<wavetrack name="iu-buzzer-beater-vs-kentucky-hd" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+	<wavetrack name="cbs-sports-ncaa-march-madness-theme" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+	<wavetrack name="cbs-sports-ncaa-march-madness-theme" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+	<wavetrack name="cbs-sports-ncaa-march-madness-theme" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+	<wavetrack name="cbs-sports-ncaa-march-madness-theme" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+	<wavetrack name="cbs-sports-ncaa-march-madness-theme" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+	<wavetrack name="cbs-sports-ncaa-march-madness-theme" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+	<wavetrack name="indiana-our-indiana" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+	<wavetrack name="indiana-our-indiana" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+</project>

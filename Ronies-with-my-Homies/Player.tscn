@@ -1,0 +1,69 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Idle (1).png" type="Texture" id=2]
+[ext_resource path="res://Walk (1).png" type="Texture" id=3]
+[ext_resource path="res://Walk (2).png" type="Texture" id=4]
+[ext_resource path="res://Walk (4).png" type="Texture" id=5]
+[ext_resource path="res://Walk (5).png" type="Texture" id=6]
+[ext_resource path="res://Walk (3).png" type="Texture" id=7]
+[ext_resource path="res://Walk (6).png" type="Texture" id=8]
+[ext_resource path="res://Walk (8).png" type="Texture" id=9]
+[ext_resource path="res://Walk (9).png" type="Texture" id=10]
+[ext_resource path="res://Walk (10).png" type="Texture" id=11]
+[ext_resource path="res://Walk (7).png" type="Texture" id=12]
+[ext_resource path="res://Walk (11).png" type="Texture" id=13]
+[ext_resource path="res://Walk (12).png" type="Texture" id=14]
+[ext_resource path="res://Walk (13).png" type="Texture" id=15]
+[ext_resource path="res://Walk (15).png" type="Texture" id=16]
+[ext_resource path="res://Walk (14).png" type="Texture" id=17]
+[ext_resource path="res://Jump (1).png" type="Texture" id=18]
+[ext_resource path="res://Jump (2).png" type="Texture" id=19]
+[ext_resource path="res://Jump (3).png" type="Texture" id=20]
+[ext_resource path="res://Jump (4).png" type="Texture" id=21]
+[ext_resource path="res://Jump (5).png" type="Texture" id=22]
+[ext_resource path="res://Jump (6).png" type="Texture" id=23]
+[ext_resource path="res://Jump (7).png" type="Texture" id=24]
+[ext_resource path="res://Jump (9).png" type="Texture" id=25]
+[ext_resource path="res://Jump (10).png" type="Texture" id=26]
+[ext_resource path="res://Jump (8).png" type="Texture" id=27]
+[ext_resource path="res://Jump (11).png" type="Texture" id=28]
+[ext_resource path="res://Jump (12).png" type="Texture" id=29]
+[ext_resource path="res://Jump (13).png" type="Texture" id=30]
+[ext_resource path="res://Jump (15).png" type="Texture" id=31]
+[ext_resource path="res://Jump (14).png" type="Texture" id=32]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 50 )
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 78.9967, 214.745 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 1 )
+animation = "Idle"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -10, 0 )
+shape = SubResource( 2 )

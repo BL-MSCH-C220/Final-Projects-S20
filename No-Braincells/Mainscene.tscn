@@ -1,0 +1,222 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Environment_Main.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Models/whuu.jpg" type="Texture" id=2]
+[ext_resource path="res://Streetlights.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Final_Test/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Pickup_Health.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Pickup_Ammo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Models/props/red sign.obj" type="ArrayMesh" id=34]
+[ext_resource path="res://coronajam.wav" type="AudioStream" id=36]
+[ext_resource path="res://Sound/zapsplat_horror_gore_impact_thud_bone_break_squelch_001_43679.wav" type="AudioStream" id=37]
+[ext_resource path="res://Sound/pm_sfg_vol1_weapon_47_3_gun_gunshot_futuristic_365.wav" type="AudioStream" id=38]
+[ext_resource path="res://Sound/zapsplat_horror_monster_creature_single_snarl_grunt_growl_nasal_005_48619.wav" type="AudioStream" id=39]
+[ext_resource path="res://Sound/leisure_video_game_retro_8bit_power_up_002.wav" type="AudioStream" id=40]
+
+[sub_resource type="GIProbeData" id=1]
+bounds = AABB( -250, -1000, -250, 500, 2000, 500 )
+cell_size = 15.625
+to_cell_xform = Transform( 0.064, 0, 0, 0, 0.064, 0, 0, 0, 0.064, 16, 64, 16 )
+dynamic_data = PoolIntArray( 0, 8, 32, 128, 32, 1, 0, 3, 5, 3, 7, 5, 8, 10, 12, 10, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 8355711, 0 )
+dynamic_range = 4
+energy = 0.3
+bias = 1.5
+normal_bias = 0.0
+propagation = 0.7
+compress = true
+
+[sub_resource type="PanoramaSky" id=2]
+panorama = ExtResource( 2 )
+
+[sub_resource type="Environment" id=3]
+background_mode = 2
+background_sky = SubResource( 2 )
+background_sky_custom_fov = 108.8
+background_sky_orientation = Basis( 0.198267, 0.739942, -0.642788, -0.965926, 0.258819, 0, 0.166366, 0.620885, 0.766044 )
+background_energy = 0.6
+ambient_light_color = Color( 0.133333, 0.0705882, 0.313726, 1 )
+ambient_light_energy = 8.22
+ambient_light_sky_contribution = 0.82
+tonemap_mode = 3
+tonemap_exposure = 1.43
+tonemap_white = 9.73
+glow_enabled = true
+glow_intensity = 1.33
+glow_strength = 0.51
+glow_bloom = 0.26
+glow_hdr_luminance_cap = 82.33
+adjustment_enabled = true
+adjustment_contrast = 1.07
+adjustment_saturation = 1.35
+
+[node name="Mainscene" type="Spatial"]
+script = ExtResource( 34 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource( 9 )]
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -11.5147 )
+
+[node name="Lighting" type="Node" parent="."]
+
+[node name="GIProbe" type="GIProbe" parent="Lighting"]
+extents = Vector3( 250, 1000, 250 )
+energy = 0.3
+compress = true
+data = SubResource( 1 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource( 3 )
+
+[node name="Streetlights" parent="Lighting" instance=ExtResource( 3 )]
+
+[node name="Environment_Main" parent="." instance=ExtResource( 1 )]
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( -0.0156724, 0, 0.999877, 0, 1, 0, -0.999877, 0, -0.0156724, -1.67627, 0.989664, 31.6127 )
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( -0.306227, 0, 0.951958, 0, 1, 0, -0.951958, 0, -0.306227, -8.003, 0.701317, 32.2367 )
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( -0.306227, 0, 0.951958, 0, 1, 0, -0.951958, 0, -0.306227, -10.8591, 0.828319, 23.8062 )
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( -0.92274, 0, -0.385423, 0, 1, 0, 0.385423, 0, -0.92274, 2.0576, 0.645484, 24.2561 )
+
+[node name="Enemy20" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( 0.869184, 0, 0.494488, 0, 1, 0, -0.494488, 0, 0.869184, -19.359, 0.65153, 10.1566 )
+
+[node name="Enemy19" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( 0.687467, 0, 0.726215, 0, 1, 0, -0.726215, 0, 0.687467, -22.9481, 0.773274, 4.90914 )
+
+[node name="Enemy18" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( 0.687467, 0, 0.726215, 0, 1, 0, -0.726215, 0, 0.687467, -16.9292, 0.701116, -1.64859 )
+
+[node name="Enemy17" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( -0.781608, 0, 0.62377, 0, 1, 0, -0.62377, 0, -0.781608, -11.1133, 0.861812, 9.89344 )
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( 0.996549, 0, -0.0829996, 0, 1, 0, 0.0829996, 0, 0.996549, -33.0602, 0.668323, -3.09377 )
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( 0.977515, 0, 0.210864, 0, 1, 0, -0.210864, 0, 0.977515, -33.0573, 0.763245, -9.4512 )
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( 0.977515, 0, 0.210864, 0, 1, 0, -0.210864, 0, 0.977515, -24.3863, 0.885, -11.462 )
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( -0.292555, 0, 0.956249, 0, 1, 0, -0.956249, 0, -0.292555, -26.1077, 0.656427, 1.34732 )
+
+[node name="Enemy12" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( 0.27406, 0, -0.961712, 0, 1, 0, 0.961712, 0, 0.27406, -4.984, 0.709, -32.9659 )
+
+[node name="Enemy11" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( 0.542295, 0, -0.840188, 0, 1, 0, 0.840188, 0, 0.542295, 0.965336, 0.842137, -35.207 )
+
+[node name="Enemy10" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( 0.542295, 0, -0.840188, 0, 1, 0, 0.840188, 0, 0.542295, 5.90708, 0.831855, -27.8037 )
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( 0.791458, 0, 0.611223, 0, 1, 0, -0.611223, 0, 0.791458, -6.68548, 0.662663, -24.8934 )
+
+[node name="Enemy16" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( -0.940044, 0, -0.341052, 0, 1, 0, 0.341052, 0, -0.940044, 29.4077, 1.11204, -9.98277 )
+
+[node name="Enemy15" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( -0.799946, 0, -0.600071, 0, 1, 0, 0.600071, 0, -0.799946, 32.0618, 1.00054, -4.20587 )
+
+[node name="Enemy14" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( -0.799946, 0, -0.600071, 0, 1, 0, 0.600071, 0, -0.799946, 25.0245, 0.931268, 1.24457 )
+
+[node name="Enemy13" parent="Enemies" instance=ExtResource( 8 )]
+transform = Transform( 0.6654, 0, -0.746487, 0, 1, 0, 0.746487, 0, 0.6654, 21.2354, 0.770638, -11.112 )
+
+[node name="Pickups" type="Node" parent="."]
+
+[node name="Pickup_Health" parent="Pickups" instance=ExtResource( 6 )]
+transform = Transform( 0.726766, 0, -0.686884, 0, 1, 0, 0.686884, 0, 0.726766, 6.2735, 2.0738, 13.6896 )
+
+[node name="Pickup_Health2" parent="Pickups" instance=ExtResource( 6 )]
+transform = Transform( -0.676773, 0, -0.736191, 0, 1, 0, 0.736191, 0, -0.676773, -34.8778, 2.0738, 7.78291 )
+
+[node name="Pickup_Health3" parent="Pickups" instance=ExtResource( 6 )]
+transform = Transform( -0.915578, 0, -0.402139, 0, 1, 0, 0.402139, 0, -0.915578, -11.8264, 2.0738, 19.9297 )
+
+[node name="Pickup_Health6" parent="Pickups" instance=ExtResource( 6 )]
+transform = Transform( 0.82601, 0, 0.563656, 0, 1, 0, -0.563656, 0, 0.82601, 7.43694, 2.0738, -40.992 )
+
+[node name="Pickup_Health5" parent="Pickups" instance=ExtResource( 6 )]
+transform = Transform( 0.661914, 0, -0.74958, 0, 1, 0, 0.74958, 0, 0.661914, 22.1845, 2.0738, 5.70587 )
+
+[node name="Pickup_Health4" parent="Pickups" instance=ExtResource( 6 )]
+transform = Transform( 0.857679, 0, -0.514186, 0, 1, 0, 0.514186, 0, 0.857679, 41.4932, 2.0738, 5.4302 )
+
+[node name="Pickup_Ammo" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( 0.627012, 0, -0.77901, 0, 1, 0, 0.77901, 0, 0.627012, -14.2096, 1.43646, -17.5091 )
+
+[node name="Pickup_Ammo2" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( 0.918261, 0.00474153, 0.395945, -0.00503519, 0.999987, -0.000297645, -0.395942, -0.00172034, 0.918274, -24.0771, 1.4702, -3.36279 )
+
+[node name="Pickup_Ammo3" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( 0.999987, 0, 0.00495657, 0, 1, 0, -0.00495657, 0, 0.999987, -13.3128, 1.4702, 15.6755 )
+
+[node name="Pickup_Ammo6" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( 0.191392, 0, -0.981514, 0, 1, 0, 0.981514, 0, 0.191392, 8.77692, 1.4702, -14.0444 )
+
+[node name="Pickup_Ammo12" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( -0.736876, 0, 0.676028, 0, 1, 0, -0.676028, 0, -0.736876, -4.37291, 1.4702, 27.8032 )
+
+[node name="Pickup_Ammo11" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( -0.0670408, 0, -0.99775, 0, 1, 0, 0.99775, 0, -0.0670408, -16.7944, 1.01435, 10.1114 )
+
+[node name="Pickup_Ammo10" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( -0.611251, 0, -0.791436, 0, 1, 0, 0.791436, 0, -0.611251, -13.1657, 1.4702, -22.2542 )
+
+[node name="Pickup_Ammo9" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( -0.803317, 0, -0.595553, 0, 1, 0, 0.595553, 0, -0.803317, -2.06329, 1.4702, 28.1181 )
+
+[node name="Pickup_Ammo8" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( -0.974853, 0, 0.222843, 0, 1, 0, -0.222843, 0, -0.974853, 9.11503, 1.4702, 27.1796 )
+
+[node name="Pickup_Ammo7" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( -0.0611714, 0, -0.998126, 0, 1, 0, 0.998126, 0, -0.0611714, 20.0209, 1.4702, 9.7445 )
+
+[node name="Pickup_Ammo18" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( -0.999824, 0, -0.0187786, 0, 1, 0, 0.0187786, 0, -0.999824, -13.8464, 1.4702, -19.6381 )
+
+[node name="Pickup_Ammo16" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( -0.753253, 0, -0.65773, 0, 1, 0, 0.65773, 0, -0.753253, -12.202, 1.40097, -39.8235 )
+
+[node name="Pickup_Ammo14" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( -0.993958, 0, 0.109752, 0, 1, 0, -0.109752, 0, -0.993958, 8.01463, 1.4702, -23.13 )
+
+[node name="Pickup_Ammo13" parent="Pickups" instance=ExtResource( 7 )]
+transform = Transform( -0.993958, 0, 0.109752, 0, 1, 0, -0.109752, 0, -0.993958, 10.9526, 1.4702, -29.4955 )
+
+[node name="BG" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 36 )
+volume_db = -12.65
+autoplay = true
+
+[node name="Gun" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 38 )
+volume_db = -16.155
+
+[node name="Impact" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 37 )
+volume_db = -4.272
+
+[node name="Die" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 39 )
+volume_db = -8.582
+
+[node name="Items" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 40 )
+volume_db = -22.214

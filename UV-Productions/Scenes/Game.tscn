@@ -1,0 +1,118 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/background-1.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Enemies.gd" type="Script" id=3]
+[ext_resource path="res://Assets/THE DOCTOR.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Bullets.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Meteors.gd" type="Script" id=6]
+[ext_resource path="res://Assets/OstrichSans-Heavy copy.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://Scripts/HUD.gd" type="Script" id=8]
+[ext_resource path="res://Assets/210737__edtijo__night-soft-techno.wav" type="AudioStream" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 25.871, 54.8152 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 1
+outline_color = Color( 0.592157, 0.145098, 0.643137, 1 )
+use_mipmaps = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+outline_size = 1
+outline_color = Color( 0.0941176, 0.0901961, 0.909804, 1 )
+font_data = ExtResource( 7 )
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Background"]
+position = Vector2( -37.1108, -27.2918 )
+scale = Vector2( 1.32002, 1.16261 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Bullets" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="Timer" type="Timer" parent="Bullets"]
+wait_time = 0.6
+one_shot = true
+
+[node name="Enemy Bullets" type="Node2D" parent="."]
+position = Vector2( -3, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 536.33, 534.877 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Player"]
+position = Vector2( -10.2767, 57.5912 )
+scale = Vector2( 2.03106, 2.03106 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( -9.04645, 65.9101 )
+shape = SubResource( 1 )
+
+[node name="Meteors" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="Timer" type="Timer" parent="Meteors"]
+autostart = true
+
+[node name="Enemies" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="Enemies"]
+autostart = true
+
+[node name="Splash" type="Node2D" parent="."]
+
+[node name="HUD" type="Node2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="Health" type="Label" parent="HUD"]
+margin_left = 24.0
+margin_top = 32.0
+margin_right = 105.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 2 )
+text = "Health: "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="HUD"]
+margin_left = 896.0
+margin_top = 32.0
+margin_right = 968.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 3 )
+text = "Score:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+[connection signal="timeout" from="Bullets/Timer" to="Bullets" method="_on_Timer_timeout"]
+[connection signal="health_changed" from="Player" to="HUD" method="_on_Player_health_changed"]
+[connection signal="score_changed" from="Player" to="HUD" method="_on_Player_score_changed"]
+[connection signal="timeout" from="Meteors/Timer" to="Meteors" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Enemies/Timer" to="Enemies" method="_on_Timer_timeout"]
